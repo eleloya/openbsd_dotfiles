@@ -1,0 +1,63 @@
+# appearance
+borderwidth 2
+snapdist 4
+color activeborder red
+color inactiveborder grey50
+gap 12 0 0 0
+moveamount 10
+
+
+# bindings
+bind 4-r	exec
+bind 4-t	menusearch
+ 
+# cwm commands
+bind CM4-q quit
+bind CM4-r restart
+bind CM4-l lock
+
+# window lower, rise, close
+bind 4-Down  lower
+bind 4-Up  rise
+bind 4-x  delete
+bind 4-h	hide
+bind 4-f	maximize
+bind 4-v	vmaximize
+bind 4-g	hmaximize
+
+# window & groups cycling
+bind 4-n          rcycle
+bind 4-m          cycle
+bind 4-Page_Up    cyclegroup 
+bind 4-Page_Down  rcyclegroup 
+
+# window moving
+bind 4-k  moveup
+bind 4-j  movedown
+bind 4-l  moveright
+bind 4-h  moveleft
+
+# window resizing
+bind 4M-k resizeup
+bind 4M-j resizedown
+bind 4M-l resizeright
+bind 4M-h resizeleft
+
+bind C4-l label
+
+
+# application menu
+command firefox		firefox
+command pidgin		pidgin
+command vim   		"xterm +vb +sb -ls -fn 9x15 -bg grey20 -fg grey90 -geometry 80x32"
+command term      "xterm +vb +sb -ls -fn 9x15 -bg grey20 -fg grey90 -geometry 151x18"
+
+
+#groups predefined
+autogroup 1	"xterm"
+autogroup 2	"xterm,vim"
+autogroup 3	"Navigator, Firefox"
+autogroup 4	"pidgin"
+
+#inherit current select group
+sticky yes
